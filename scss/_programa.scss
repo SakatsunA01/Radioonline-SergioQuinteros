@@ -1,0 +1,74 @@
+@import "../base/colores";
+
+/* programa */
+.container-programa-desktop{
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba(nth($color, 2), $alpha: 0.9);
+    height: 11vh;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+.container-programa-mobile{
+    display: none;
+}
+.btn{
+    margin: 5px 10px;
+    display: inline-flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 20vh;
+    height: 7vh;
+    border: none;
+    color: white;
+    background-color: nth($color, 5); 
+    border-radius: 10px;
+    font-size: 2rem;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    span{
+        position: relative;
+        z-index: 2;
+        transition: 0.3s all;
+    }
+}
+.btn::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: nth($color, 1);
+    z-index: 1;
+    top: -80px;
+    left: 0;
+    transition: 0.3s ease-in-out all;
+}
+.btn:hover::after{
+    top: 0;
+}
+
+.dropdown_menu{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 21vh;
+    background-color: rgba(nth($color, 2), $alpha: 0.9);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    a{
+        padding: 0 10px;
+        display: flex;
+        justify-content: flex-end;
+        text-decoration: none;
+        color: nth($color, 1);
+    }
+    :hover{
+        transition: all 0.5s;
+        color: white;
+    }
+}
+.dropdown_menu_hide{
+    display: none;
+}

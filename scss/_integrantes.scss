@@ -1,0 +1,44 @@
+@import "../base/colores";
+
+/* cartas */
+.container-carta-desktop{
+    background-color: rgba(nth($color, 2), $alpha: 0.9);
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.container-carta-mobile{
+    display: none;
+}
+.carta{
+    width: 17.9rem;
+    background-color: nth($color, 5);
+    border-radius: 10px;
+    text-align: center;
+    color: nth($color, 2);
+    padding: 0 0 20px 0;
+    box-shadow: 0 10px 10px 0 nth($color, 1);
+    h5{
+        margin: 0 0 8px 0;
+    }
+    p{
+        font-size: 1.5rem;
+    }
+    img{
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    button{
+        width: 13vh;
+        height: 4vh;
+        border: none;
+        background-color: nth($color, 7); 
+        border-radius: 10px;
+        a{
+            text-decoration: none;
+            color: white;
+        }
+    }
+}

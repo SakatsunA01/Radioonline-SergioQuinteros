@@ -1,0 +1,27 @@
+@import "../base/colores";
+
+/* footer */
+.container-footer{
+    text-align: center;
+    height: 100%;
+    background-color: nth($color, 2);
+    color: nth($color, 1);
+    border-radius: 20px;
+    h6{
+        font-size: 3rem;
+    }
+}
+.container-redes{
+    height: 25vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    a{
+        text-decoration: none;
+        color: nth($color, 1);
+    }
+}
+.box-redes{
+    display: flex;
+    align-items: center;
+}

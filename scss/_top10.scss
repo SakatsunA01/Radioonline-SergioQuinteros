@@ -1,0 +1,23 @@
+@import "../base/colores";
+
+.container-top10{
+    display: flex;
+    flex-direction: column;
+}
+.box-top10{
+    margin: 20px 0 20px 0;
+    background-color: nth($color, 4);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 10px;
+    width: 100%;
+    height: 10vh;
+    img{
+        width: 100px;
+        height: 100%;
+    }
+    p{
+        margin: 0 20px 0 20px;
+    }
+}

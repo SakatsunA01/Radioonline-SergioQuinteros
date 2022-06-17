@@ -1,0 +1,31 @@
+@import "../base/colores";
+
+.container-podcast{
+    background-color: rgba(nth($color, 2), $alpha: 0.4);
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 10px;
+    margin: 20px 0 20px 0;
+
+}
+.box-podcast{
+    margin: 20px;
+    max-width: 30vh;
+    img{
+        border-radius: 10px;
+        max-width: 30vh;
+    }
+    p{
+        background-color: rgba(nth($color, 1), $alpha: 0.8);
+        font-size: 1.5rem;
+        border-radius: 5px;
+        margin: 10px;
+    }
+    p:hover{
+        transition: all 0.5s;
+        box-shadow: 0 0 10px 10px nth($color, 2);
+    }
+}
