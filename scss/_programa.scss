@@ -1,6 +1,9 @@
 @import "../base/colores";
 
 /* programa */
+.container-programa-mobile{
+    display: none;
+}
 .container-programa-desktop{
     padding: 20px;
     display: flex;

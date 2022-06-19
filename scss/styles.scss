@@ -139,6 +139,36 @@ main{
     .container-programa-desktop{
         display: none;
     }
+    .dropdown_menu{
+        display: none;
+    }
+    .container-programa-mobile{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 20px 0;
+    }
+    .btn{
+        margin: 20px 0 0 0; 
+        width: 40vh;
+        height: 7vh;
+    }
+    .horario-mobile{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 21vh;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    a{
+        padding: 0 10px;
+        display: flex;
+        justify-content: flex-end;
+        text-decoration: none;
+        color: nth($color, 1);
+    }
+    }
 
 
     /* integrantes*/

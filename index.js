@@ -5,12 +5,6 @@ navbarToggle.addEventListener("click", () => {
     navbarMenu.classList.toggle("navbar-menu_visible")
 })
 
-// const btn = document.querySelector(".btn");
-// const dropdownMenu = document.querySelector(".dropdown_menu");
-
-// btn.addEventListener("click", () => {
-//     dropdownMenu.classList.toggle("dropdown_menu_hide")
-// })
 const btn = document.querySelector(".btn");
 var dropdownMenu = document.querySelector(".dropdown_menu");
 
