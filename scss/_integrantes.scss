@@ -9,7 +9,15 @@
     justify-content: space-around;
     align-items: center;
 }
-.container-carta-mobile{
+.container-carta-desktop-index{
+    background-color: rgba(nth($color, 2), $alpha: 0.9);
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.container-carta-mobile-index{
     display: none;
 }
 .carta{
