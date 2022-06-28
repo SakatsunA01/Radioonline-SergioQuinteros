@@ -1,27 +1,43 @@
-@import "../base/colores";
+@import "./base/colores";
+@import "./base/mixins";
 
 .container-top10{
     display: flex;
     flex-direction: column;
 }
 .box-top10{
-    margin: 20px 0 20px 0;
+    margin: 2vh 0 2vh 0;
     background-color: nth($color, 4);
     display: flex;
     justify-content: flex-start;
     align-items: center;
     border-radius: 10px;
-    width: 100%;
-    height: 10vh;
+    @include width-height(100%, 11vh);
+    box-shadow: 
+        rgba(50, 50, 93, 0.1) 0px 30px 60px -12px inset,
+        rgba(0, 0, 0, 0.2) 0px 18px 36px -18px inset;
     img{
-        width: max-content;
-        height: 100%;
+        @include width-height(max-content, 100%)
     }
     p{
+        font-size: 1.7rem;
         margin: 0 20px 0 20px;
     }
     a{
         text-decoration: none;
         color: white;
+    }
+}
+
+/* medias */
+@media (max-width: 968px) {
+
+    /* top 10*/
+    .box-top10{
+        font-size: 1rem;
+        p{
+            font-size: 0.7rem;
+            margin: 0 5px 0 5px;
+        }
     }
 }

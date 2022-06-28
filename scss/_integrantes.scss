@@ -1,4 +1,5 @@
-@import "../base/colores";
+@import "./base/colores";
+@import "./base/mixins";
 
 /* cartas */
 .container-carta-desktop{
@@ -8,6 +9,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    margin-bottom: 20px;
 }
 .container-carta-desktop-index{
     background-color: rgba(nth($color, 2), $alpha: 0.9);
@@ -21,7 +23,7 @@
     display: none;
 }
 .carta{
-    width: 17.9rem;
+    width: 14.3rem;
     background-color: nth($color, 5);
     border-radius: 10px;
     text-align: center;
@@ -29,24 +31,57 @@
     padding: 0 0 20px 0;
     box-shadow: 0 10px 10px 0 nth($color, 1);
     h5{
+        font-size: 1.7rem;
         margin: 0 0 8px 0;
     }
     p{
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
     img{
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
     }
     button{
-        width: 13vh;
-        height: 4vh;
+        @include width-height(6rem, 4vh);
         border: none;
         background-color: nth($color, 7); 
         border-radius: 10px;
         a{
+            font-size: 0.8rem;
             text-decoration: none;
             color: white;
         }
+    }
+}
+
+/* medias */
+@media (max-width: 968px) {
+
+    /* integrantes*/
+    .container-carta-mobile-index{
+        border-radius: 20px;
+        padding: 10px;
+        @include display-flex-justify-center;
+        margin-bottom: 20px;
+        img{
+            box-shadow: 
+                -10px 0px 13px -7px nth($color, 2),
+                10px 0px 13px -7px nth($color, 2),
+                5px 5px 15px 5px rgba(0,0,0,0);
+        }
+    }
+    .container-carta-desktop-index{
+        display: none;
+    }
+    .container-carta-desktop{
+        background-color: rgba(nth($color, 2), $alpha: 0.9);
+        border-radius: 20px;
+        margin: 20px 0 20px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .carta{
+        margin: 20px 0 20px 0;
     }
 }

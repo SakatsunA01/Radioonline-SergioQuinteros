@@ -1,0 +1,92 @@
+@import "./base/colores";
+@import "./base/mixins";
+
+*{
+    font-size: 20px;
+    margin: 0;
+    box-sizing: border-box;
+    h1{
+        font-size: 3rem;
+    }
+    h2{
+        font-size: 3rem;
+    }
+}
+
+body{
+    padding: 160px 5vw 20px 5vw;
+    background-image: url(../imagenes/fondo3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    font-size: 2rem;
+}
+
+main{
+    min-height: calc(100vh - 100px - 300px);
+}
+
+/* ver mas general*/
+.vermas{
+    @include display-flex-justify-center;
+    padding: 10px;
+    a{
+        font-size: 2rem;
+        color: white;
+        text-decoration: none;
+    }
+    :hover{
+        font-size: 2.2rem;
+        padding: 0.3vh;
+        background-color: rgba(255, 255, 255, 0.5);
+        transition: all 1s;
+        border-radius: 10px;
+        color: nth($color, 7);
+    }
+}
+
+/* video yt*/
+.videoyt{
+    @include width-height(100%, 315px);
+    border-radius: 10px;
+    box-shadow:
+        rgba(nth($color,2), 0.4) 0px 5px,
+        rgba(nth($color,2), 0.3) 0px 10px,
+        rgba(nth($color,2), 0.2) 0px 15px,
+        rgba(nth($color,2), 0.1) 0px 20px,
+        rgba(nth($color,2), 0.05) 0px 25px;
+}
+
+/* titulos */
+.titulos{
+    font-size: 20rem;
+    margin: 20px 0 20px 0;
+    @include display-flex-justify-center;
+    align-items: center;
+    text-shadow: 0px 1px 11px rgba(0, 0, 0, 1);
+    
+}
+
+@media (max-width: 968px){
+    /* video yt*/
+    .videoyt{
+        @include width-height(100%, 215px);
+        box-shadow:
+        rgba(nth($color,2), 0.4) 0px 5px,
+        rgba(nth($color,2), 0.3) 0px 10px,
+        rgba(nth($color,2), 0.2) 0px 15px,
+        rgba(nth($color,2), 0.1) 0px 20px,
+        rgba(nth($color,2), 0.05) 0px 25px;
+    }
+
+    /* titulos*/
+    .titulos{
+        text-align: center;
+        h1, h2{
+            font-size: 1.5rem;
+        }
+    }
+    .vermas{
+        display: none;
+    }
+}
